@@ -10,9 +10,6 @@ jobs:
       environment:
         - MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
         - MYSQL_ROOT_HOST: '127.0.0.1'
-    - image: selenium/standalone-chrome-debug
-      logging:
-        driver: none
     working_directory: ~/projects/pictweet  #自身のアプリディレクトリ名を設定  
 
 
