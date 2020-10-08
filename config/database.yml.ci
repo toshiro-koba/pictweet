@@ -3,6 +3,5 @@ test:
   encoding: utf8
   pool:  5 
   username: root
-  password: secret
   host: '127.0.0.1'
   database: pictweet_test
