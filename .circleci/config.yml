@@ -43,6 +43,10 @@ jobs:
             bundle exec rake db:create
             bundle exec rake db:schema:load
 
+    - image: selenium/standalone-chrome-debug
+      logging:
+        driver: none
+
     # run tests!
     - run:
         name: Run rspec
