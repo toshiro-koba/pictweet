@@ -53,7 +53,7 @@ RSpec.describe 'ツイート編集', type: :system do
   context 'ツイート編集できる時' do
     it 'ログインしたユーザーは自分が投稿したツイートの編集ができる' do
       # ツイート1を投稿したユーザーでログインする
-      sign_in(@user)
+      sign_in(@tweet1.user)
       # ツイート1に「編集」ボタンがあることを確認する
       expect(
         all(".more")[1].hover
@@ -112,6 +112,7 @@ end
 
 RSpec.describe 'ツイート削除', type: :system do
   before do
+    @user = FactoryBot.create(:user)
     @tweet1 = FactoryBot.create(:tweet)
     @tweet2 = FactoryBot.create(:tweet)
   end
